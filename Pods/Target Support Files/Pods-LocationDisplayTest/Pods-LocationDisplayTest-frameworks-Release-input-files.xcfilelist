@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-LocationDisplayTest/Pods-LocationDisplayTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PermissionKit/PermissionKit.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxCoreLocation/RxCoreLocation.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

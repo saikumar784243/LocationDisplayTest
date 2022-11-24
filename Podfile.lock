@@ -1,0 +1,74 @@
+PODS:
+  - PermissionKit (1.5.1):
+    - PermissionKit/Bluetooth (= 1.5.1)
+    - PermissionKit/Camera (= 1.5.1)
+    - PermissionKit/Contacts (= 1.5.1)
+    - PermissionKit/Core (= 1.5.1)
+    - PermissionKit/Event (= 1.5.1)
+    - PermissionKit/Location (= 1.5.1)
+    - PermissionKit/Media (= 1.5.1)
+    - PermissionKit/Motion (= 1.5.1)
+    - PermissionKit/Notification (= 1.5.1)
+    - PermissionKit/Photos (= 1.5.1)
+    - PermissionKit/Siri (= 1.5.1)
+    - PermissionKit/Speech (= 1.5.1)
+    - PermissionKit/Tracking (= 1.5.1)
+  - PermissionKit/Bluetooth (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Camera (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Contacts (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Core (1.5.1)
+  - PermissionKit/Event (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Location (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Media (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Motion (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Notification (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Photos (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Siri (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Speech (1.5.1):
+    - PermissionKit/Core
+  - PermissionKit/Tracking (1.5.1):
+    - PermissionKit/Core
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxCoreLocation (1.5.1):
+    - RxCoreLocation/Core (= 1.5.1)
+  - RxCoreLocation/Core (1.5.1):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - PermissionKit
+  - RxCoreLocation (~> 1.5.1)
+
+SPEC REPOS:
+  trunk:
+    - PermissionKit
+    - RxCocoa
+    - RxCoreLocation
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  PermissionKit: bdfe6460e7de62b5e84785d40bb7065ea5ee2638
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxCoreLocation: a78f4cbf32a4c6c47ecccbe22d41ff93b7e8c099
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: 2b846db986c9d83d92cef860e3d089480650d3bc
+
+COCOAPODS: 1.11.3
