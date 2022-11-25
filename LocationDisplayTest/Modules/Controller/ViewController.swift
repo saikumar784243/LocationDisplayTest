@@ -40,27 +40,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotations([startAnnotation, endAnnotation])
         
         //Setup location manager
+        manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
         //Location manager:- Subscribe to didUpdateLocations
         manager.rx
             .didUpdateLocations
-            .debug("didUpdateLocations")
+            .debug(ViewCtrl.didUpdateLocations)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
         //Location manager:- Subscribe to didChangeAuthorization
         manager.rx
             .didChangeAuthorization
-            .debug("didChangeAuthorization")
+            .debug(ViewCtrl.didChangeAuthorization)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
         //Location manager:- Subscribe to placemark
         manager.rx
             .placemark
-            .debug("placemark")
+            .debug(ViewCtrl.placemark)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
@@ -73,7 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     let postalCode = placemark.postalCode,
                     let locality = placemark.locality,
                     let subLocality = placemark.subLocality else {
-                        return print("oops it looks like your placemark could not be computed")
+                    return print(ViewCtrl.placeMarkError)
                 }
                 print("name: \(name)")
                 print("isoCountryCode hello: \(isoCountryCode)")
@@ -87,14 +88,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         //Location manager:- Subscribe to location
         manager.rx
             .location
-            .debug("location")
+            .debug(ViewCtrl.location)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
         //Location manager:- Subscribe to activityType
         manager.rx
             .activityType
-            .debug("activityType")
+            .debug(ViewCtrl.activityType)
             .subscribe(onNext: {_ in})
             .disposed(by: bag)
         
@@ -102,7 +103,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         DispatchQueue.main.async {
             self.manager.rx
                 .isEnabled
-                .debug("isEnabled")
+                .debug(ViewCtrl.isEnabled)
                 .subscribe(onNext: { _ in })
                 .disposed(by: self.bag)
         }
@@ -110,28 +111,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
         //Location manager:- Subscribe to didError
         manager.rx
             .didError
-            .debug("didError")
+            .debug(ViewCtrl.didError)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
                 
         //Location manager:- Subscribe to didDetermineState
         manager.rx
             .didDetermineState
-            .debug("didDetermineState")
+            .debug(ViewCtrl.didDetermineState)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
         //Location manager:- Subscribe to didReceiveRegion
         manager.rx
             .didReceiveRegion
-            .debug("didReceiveRegion")
+            .debug(ViewCtrl.didReceiveRegion)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
         
         //Location manager:- Subscribe to didResume
         manager.rx
             .didResume
-            .debug("didResume")
+            .debug(ViewCtrl.didResume)
             .subscribe(onNext: { _ in })
             .disposed(by: bag)
     }
